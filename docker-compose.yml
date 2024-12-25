@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  server:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    environment:
+      - MODEL_DIR=/models
+      - MAX_MODELS=5
+      - N_JOBS=4
+      
